@@ -75,4 +75,9 @@ public class SignInPage {
     public boolean isLoginButtonVisible() {
         return loginButton.isDisplayed();
     }
+
+    public void ClickpaidlineNum() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'ClickpaidlineNum'");
+    }
 }

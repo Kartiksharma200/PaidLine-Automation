@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: come.pages.SignUpPage
+-------------------------------------------------------------------------------
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.603 s -- in come.pages.SignUpPage
