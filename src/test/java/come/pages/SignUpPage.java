@@ -47,6 +47,10 @@ public class SignUpPage {
     @FindBy(xpath = "//*[@type=\"submit\"]")
     @CacheLookup
     private WebElement submitBtn;
+
+    @FindBy(linkText = "Email is already registered with another user")
+    @CacheLookup
+    private WebElement errorMessage;
     
     @FindBy(xpath = "(//*[@fill=\"currentColor\"])[2]")
     @CacheLookup
@@ -59,6 +63,19 @@ public class SignUpPage {
     @FindBy(xpath = "//*[@href=\"/contact-us\"]")
     @CacheLookup
     private WebElement verifyEmailContactUs;
+
+    @FindBy(xpath = "(//*[@type=\"button\"])[1]")
+    @CacheLookup
+    private WebElement googleSignUp;
+
+    @FindBy(xpath = "(//*[@type=\"button\"])[2]")
+    @CacheLookup
+    private WebElement linkdinSignUp;
+
+    @FindBy(xpath = "(//*[@type=\"button\"])[3]")
+    @CacheLookup
+    private WebElement twitterSignUp;
+    
     
     //Action 
     
@@ -88,5 +105,9 @@ public class SignUpPage {
     
     public void clickSignUpButton() {
     	submitBtn.click();
+    }
+
+    public String getErrorMessage(){
+        return errorMessage.getText();
     }
 }

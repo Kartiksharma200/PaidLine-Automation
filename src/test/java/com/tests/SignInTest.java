@@ -50,6 +50,7 @@ public class SignInTest extends BaseTest {
      * 
      * Expected Result: Sign In button disable
      * */
+    
     @Test (priority = 3)
     public void loginWithEmptyFields() {
         SignInPage signIn = new SignInPage(driver);
