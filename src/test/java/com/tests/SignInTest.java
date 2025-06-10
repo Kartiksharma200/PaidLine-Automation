@@ -15,7 +15,7 @@ public class SignInTest extends BaseTest {
 	 * Expected Result: We Redirect to Dashboard/Onboarding process
 	 * */
     @Test (priority = 1)
-    public void loginWithValidCredentials() {
+    public void loginWithValidCredentials() throws Exception {
         test = extent.createTest("Login with Valid Credentials");
 
         try {
@@ -26,6 +26,7 @@ public class SignInTest extends BaseTest {
 
             assertTrue(driver.getCurrentUrl().contains("dashboard"));
             test.pass("Login successful. Dashboard URL verified.");
+            Thread.sleep(3000);
         } catch (Exception e) {
             String screenshotPath = ScreenshotUtils.captureScreenshot(driver, "loginWithValidCredentials");
             test.fail("Login test failed. Error: " + e.getMessage())

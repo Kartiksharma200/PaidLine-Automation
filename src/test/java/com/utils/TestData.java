@@ -16,5 +16,11 @@ public class TestData {
     public static String lastName = "Sharma";
     public static String email = "kartik.sharma@gmail.com";
     public static String password = "Pass12345";
+
+     
+    /*
+     Call Rate Data
+    */
+    public static Integer SetRate=3;
 }
 
