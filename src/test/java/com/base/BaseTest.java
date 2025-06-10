@@ -32,7 +32,7 @@ public class BaseTest {
 
     @AfterMethod
     public void tearDown() {
-        if (driver != null) {
+       if (driver != null) {
             driver.quit(); // Close browser after each test
         }
     }
