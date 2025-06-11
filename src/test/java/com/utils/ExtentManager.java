@@ -11,7 +11,7 @@ public class ExtentManager {
 
  public static ExtentReports createInstance() {
      if (extent == null) {
-         ExtentSparkReporter sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/test-output/ExtentReport.html");
+         ExtentSparkReporter sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/test-output/ExtentReport.html/");
 
          sparkReporter.config().setDocumentTitle("Paidline Automation Report");
          sparkReporter.config().setReportName("QA Regression Suite");

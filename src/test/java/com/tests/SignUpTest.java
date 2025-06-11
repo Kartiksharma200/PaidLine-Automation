@@ -1,18 +1,14 @@
 package com.tests;
-
 import org.testng.annotations.Test;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.base.BaseTest;
+import com.utils.ScreenshotUtils;
+import com.utils.TestData;
 
-public class SignUpTest {
+import come.pages.SignUpPage;
 
-    
-    private ExtentReports extent;
-    private ExtentTest extentTest;
-  
-
-    @BeforeClass
-    public void setUp() {
-        extent = ExtentManager.createInstance(); 
-    }
+public class SignUpTest extends BaseTest{
 
     /*Sceanrio 1: Sign Up with Valid Credentials
 	 * 
@@ -20,24 +16,25 @@ public class SignUpTest {
 	 * */
 
     @Test
-    public void validSignUpTest() {
-        extentTest = extent.createTest("Valid Sign-Up Test"); 
+    public void validSignUpTest() throws Exception {
+       test = extent.createTest("Valid Sign-Up Test"); 
 
         try {
             SignUpPage signup = new SignUpPage(driver);
             signup.enterFirstName(TestData.firstName);
-            signup.enterlastName(TestData.lastName);
+            signup.enterLastName(TestData.lastName);
             signup.enterEmail(TestData.email);
             signup.enterPassword(TestData.password);
             signup.clickEyeIcon();
             signup.clickSignUpButton();
-            extentTest.pass("Sign-Up test passed successfully");
+            test.pass("Sign-Up test passed successfully");
+            Thread.sleep(3000);
         } catch (Exception e) {
-            extentTest.fail("Sign-Up test failed: " + e.getMessage());
+        	String screenshotPath = ScreenshotUtils.captureScreenshot(driver, "ValidSignUpTest");
+            test.fail("Sign-Up test failed: " + e.getMessage())
+            .addScreenCaptureFromPath(screenshotPath);
+            throw e;
         }
     }
 
-    @AfterClass
-    public void tearDown() {
-        extent.flush();
 }
