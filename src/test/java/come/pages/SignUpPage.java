@@ -9,6 +9,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.utils.WaitUtils;
+
 public class SignUpPage {
 	
 	private WebDriver driver;
@@ -80,21 +82,25 @@ public class SignUpPage {
     //Action 
     
     public void enterFirstName(String firstName) {
+    	WaitUtils.waitForElementToBeVisible(driver, firstNameField, 10);
     	firstNameField.clear();
     	firstNameField.sendKeys(firstName);
     }
     
     public void enterLastName(String lastName) {
+    	WaitUtils.waitForElementToBeVisible(driver, lastNameField, 10);
     	lastNameField.clear();
     	lastNameField.sendKeys(lastName);
     }
     
     public void enterEmail(String email) {
+    	WaitUtils.waitForElementToBeVisible(driver, emailField, 10);
     	emailField.clear();
     	emailField.sendKeys(email);
     }
     
     public void enterPassword(String password) {
+    	WaitUtils.waitForElementToBeVisible(driver, passwordField, 10);
     	passwordField.clear();
     	passwordField.sendKeys(password);
     }
@@ -104,10 +110,12 @@ public class SignUpPage {
     }
     
     public void clickSignUpButton() {
+    	WaitUtils.waitForElementToBeVisible(driver, submitBtn, 10);
     	submitBtn.click();
     }
 
     public String getErrorMessage(){
+    	WaitUtils.waitForElementToBeVisible(driver, errorMessage, 10);
         return errorMessage.getText();
     }
 }

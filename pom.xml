@@ -17,14 +17,12 @@
             <version>4.20.0</version>
         </dependency>
 
-        <!-- TestNG -->
         <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>6.14.3</version> <!-- Downgraded to a version compatible with Java 8 -->
-            <scope>test</scope>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>7.8.0</version> <!-- Or latest -->
+        <scope>test</scope>
         </dependency>
-
         <!-- WebDriverManager (Optional: Auto-manage drivers) -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>

@@ -3,15 +3,32 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
+      <class name="com.tests.YourNumTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setupReport"/>
+          <include name="testClickYourNumberCard"/>
+          <include name="flushReport"/>
+          <include name="setUp"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.tests.YourNumTest -->
       <class name="com.tests.SignInTest">
         <methods>
           <include name="tearDown"/>
           <include name="setupReport"/>
+          <include name="loginWithEmptyFields"/>
           <include name="loginWithValidCredentials"/>
           <include name="flushReport"/>
           <include name="setUp"/>
+          <include name="loginWithInvalidCredentials"/>
         </methods>
       </class> <!-- com.tests.SignInTest -->
+      <class name="com.base.BaseTest">
+        <methods>
+          <include name="flushReport"/>
+        </methods>
+      </class> <!-- com.base.BaseTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->
