@@ -26,6 +26,10 @@ public class SignUpPage {
     
     //Web Element (Locators)
     
+    @FindBy(xpath = "//*[@href='/signup']")
+    @CacheLookup
+    private WebElement signup;
+
     @FindBy(xpath = "//*[@placeholder=\"Jordan\"]")
     @CacheLookup
     private WebElement firstNameField;
@@ -34,19 +38,19 @@ public class SignUpPage {
     @CacheLookup
     private WebElement lastNameField;
     
-    @FindBy(xpath = "//*[@placeholder=\"Email\"]")
+    @FindBy(xpath = "(//*[@class=\"chakra-input globalInput !rounded-[50px] !text-[16px] placeholder:text-[16px] css-2mnyyt\"])[3]")
     @CacheLookup
     private WebElement emailField;
 
-    @FindBy(xpath = "//*[@placeholder=\"Password\"]")
+    @FindBy(xpath = "//*[@placeholder='Password']")
     @CacheLookup
     private WebElement passwordField;
 
-    @FindBy(xpath = "//*[@class=\"eyeIcon\"]")
+    @FindBy(xpath = "//*[@class='eyeIcon']")
     @CacheLookup
     private WebElement eyeIcon;
 
-    @FindBy(xpath = "//*[@type=\"submit\"]")
+    @FindBy(xpath = "//*[@class=\"chakra-button w-full css-14v69uj\"]")
     @CacheLookup
     private WebElement submitBtn;
 
@@ -80,6 +84,11 @@ public class SignUpPage {
     
     
     //Action 
+
+    public void clickOnSignUp(){
+         signup.click();
+         WaitUtils.waitForUrlToContain(driver, "signup");
+    }
     
     public void enterFirstName(String firstName) {
     	WaitUtils.waitForElementToBeVisible(driver, firstNameField, 10);
@@ -117,5 +126,10 @@ public class SignUpPage {
     public String getErrorMessage(){
     	WaitUtils.waitForElementToBeVisible(driver, errorMessage, 10);
         return errorMessage.getText();
+    }
+
+    public void handleSignupPop(){
+        verifyEmailResendEmail.click();
+        verifyEmailContactUs.click();
     }
 }

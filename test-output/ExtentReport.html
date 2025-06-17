@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">QA Regression Suite</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jun 11, 2025 09:57:14 am</span></a>
+<a href="#"><span class="badge badge-primary">Jun 17, 2025 08:37:27 am</span></a>
 </li>
 </ul>
 </div>
@@ -66,6 +66,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
 <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
@@ -74,14 +75,55 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="fail" test-id="1"
+        <li class="test-item"  status="pass" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Valid Sign-Up Test</p>
             <p class="text-sm">
-              <span>9:57:31 am</span> / <span>00:00:31:315</span>
+              <span>8:37:36 am</span> / <span>00:00:06:879</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Valid Sign-Up Test</h5>
+<span class='badge badge-success'>06.17.2025 8:37:36 am</span>
+<span class='badge badge-danger'>06.17.2025 8:37:43 am</span>
+<span class='badge badge-default'>00:00:06:879</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:37:43 am</td>
+        <td>
+          Sign-Up test passed successfully
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">InValid Sign-Up Test</p>
+            <p class="text-sm">
+              <span>8:37:55 am</span> / <span>00:00:02:917</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -89,18 +131,18 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Valid Sign-Up Test</h5>
-<span class='badge badge-success'>06.11.2025 9:57:31 am</span>
-<span class='badge badge-danger'>06.11.2025 9:58:03 am</span>
-<span class='badge badge-default'>00:00:31:315</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<h5 class="test-status text-fail">InValid Sign-Up Test</h5>
+<span class='badge badge-success'>06.17.2025 8:37:55 am</span>
+<span class='badge badge-danger'>06.17.2025 8:37:58 am</span>
+<span class='badge badge-default'>00:00:02:917</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
 </div>
 </div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\10000\eclipse-workspace\PAIDLINE/test-output/screenshots/ValidSignUpTest_20250611_095803.png' src="C:\Users\10000\eclipse-workspace\PAIDLINE/test-output/screenshots/ValidSignUpTest_20250611_095803.png">
+<img data-featherlight='C:\Users\10000\eclipse-workspace\PAIDLINE/test-output/screenshots/InValidSignUpTest_20250617_083758.png' src="C:\Users\10000\eclipse-workspace\PAIDLINE/test-output/screenshots/InValidSignUpTest_20250617_083758.png">
     
     </div></div>
 <div class="detail-body mt-4">
@@ -109,9 +151,70 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>9:58:03 am</td>
+        <td>8:37:58 am</td>
         <td>
-          Sign-Up test failed: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@placeholder="Email"]' (tried for 20 second(s) with 500 milliseconds interval)
+          Sign-Up test failed: element click intercepted: Element <button disabled="" type="submit" class="chakra-button w-full css-14v69uj">...</button> is not clickable at point (480, 580). Other element would receive the click: <p class="chakra-text mt-1 flex items-center gap-2 text-xs css-1kwcear">...</p>
+  (Session info: chrome=122.0.6261.129)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e99a2e8cec96e35bfb2b5e7ee0d0f0fd, clickElement {id=f.286F83FC2E1F61F007EFA702D6DBC14A.d.0F456B2EE96F8E04723BD63DBFE75FCA.e.217}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\10000\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60381}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60381/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (e99a2e8cec96e35bfb2b5e7ee0d0f0fd)] -> xpath: //*[@class="chakra-button w-full css-14v69uj"]]
+Session ID: e99a2e8cec96e35bfb2b5e7ee0d0f0fd
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Empty Field Sign-Up Test</p>
+            <p class="text-sm">
+              <span>8:38:04 am</span> / <span>00:00:02:419</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Empty Field Sign-Up Test</h5>
+<span class='badge badge-success'>06.17.2025 8:38:04 am</span>
+<span class='badge badge-danger'>06.17.2025 8:38:07 am</span>
+<span class='badge badge-default'>00:00:02:419</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\10000\eclipse-workspace\PAIDLINE/test-output/screenshots/Empty Field SignUp Test_20250617_083807.png' src="C:\Users\10000\eclipse-workspace\PAIDLINE/test-output/screenshots/Empty Field SignUp Test_20250617_083807.png">
+    
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>8:38:07 am</td>
+        <td>
+          Sign-Up test failed: element click intercepted: Element <button disabled="" type="submit" class="chakra-button w-full css-14v69uj">...</button> is not clickable at point (480, 590). Other element would receive the click: <p class="chakra-text mt-1 flex items-center gap-2 text-xs css-1jcqmhd">...</p>
+  (Session info: chrome=122.0.6261.129)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [575f7fb90a207725782eb6ecfa493676, clickElement {id=f.76253C608E523047D155EDBF157385A2.d.5ADB6BD07F2CDD52E6F0C10F082054EB.e.21}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\10000\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60419}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60419/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (575f7fb90a207725782eb6ecfa493676)] -> xpath: //*[@class="chakra-button w-full css-14v69uj"]]
+Session ID: 575f7fb90a207725782eb6ecfa493676
         </td>
       </tr>
   </tbody>
@@ -133,25 +236,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jun 11, 2025 09:57:14 am</h3>
+<h3>Jun 17, 2025 08:37:27 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jun 11, 2025 09:58:03 am</h3>
+<h3>Jun 17, 2025 08:38:07 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>1</h3>
+<h3>2</h3>
 </div></div>
 </div>
 </div>
@@ -167,12 +270,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='0%'>
-<b>0</b> tests passed
+<div><small data-tooltip='33%'>
+<b>1</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='100%'><b>1</b> tests failed,
+<small data-tooltip='66%'><b>2</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -190,9 +293,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='0%'><b>0</b> events passed</small></div>
+<div><small data-tooltip='33%'><b>1</b> events passed</small></div>
 <div>
-<small data-tooltip='100%'><b>1</b> events failed,
+<small data-tooltip='66%'><b>2</b> events failed,
 <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -209,7 +312,7 @@
 </div></div>
 <script>
 var timeline = {
-"Valid Sign-Up Test":31.315
+"Valid Sign-Up Test":6.879,"InValid Sign-Up Test":2.917,"Empty Field Sign-Up Test":2.419
 };
 </script>
 <div class="row">
@@ -236,8 +339,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 0,
-failParent: 1,
+passParent: 1,
+failParent: 2,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -253,8 +356,8 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 0,
-failEvents: 1,
+passEvents: 1,
+failEvents: 2,
 warningEvents: 0,
 skipEvents: 0,
 infoEvents: 0

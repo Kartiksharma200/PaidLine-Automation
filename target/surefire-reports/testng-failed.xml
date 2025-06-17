@@ -17,18 +17,20 @@
         <methods>
           <include name="tearDown"/>
           <include name="setupReport"/>
-          <include name="loginWithEmptyFields"/>
           <include name="loginWithValidCredentials"/>
           <include name="flushReport"/>
           <include name="setUp"/>
-          <include name="loginWithInvalidCredentials"/>
         </methods>
       </class> <!-- com.tests.SignInTest -->
-      <class name="com.base.BaseTest">
+      <class name="com.tests.SignUpTest">
         <methods>
+          <include name="tearDown"/>
+          <include name="setupReport"/>
+          <include name="validSignUpTest"/>
           <include name="flushReport"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.base.BaseTest -->
+      </class> <!-- com.tests.SignUpTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

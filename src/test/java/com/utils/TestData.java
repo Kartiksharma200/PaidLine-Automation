@@ -12,15 +12,25 @@ public class TestData {
     /*
      Sign Up Data
     */
-    public static String firstName = "Kartik";
-    public static String lastName = "Sharma";
-    public static String email = "kartik.sharma@gmail.com";
-    public static String password = "Pass12345";
+    public static String signUpFirstName = "Kartik";
+    public static String signUpLastName = "Sharma";
+    public static String signUpEmail = "kartik.sharma@gmail.com";
+    public static String signUpPassword = "Pass@12345";
+
+    public static String invalidSignUpFirstName = "Kartik@qas";
+    public static String invalidSignUpLastName = "Shar5ma@!";
+    public static String invalidSignUpEmail = "12345@com.ha";
+    public static String invalidSignUpPassword = "    fassaf  ";
+
+    public static String emptySignUpFirstName = "         ";
+    public static String emptySignUpLastName = "          ";
+    public static String emptySignUpEmail = "             ";
+    public static String emptySignUpPassword = "          ";
 
      
     /*
      Call Rate Data
     */
-    public static Integer SetRate=3;
+    public static Integer SetRate = 38;
 }
 
